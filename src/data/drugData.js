@@ -15,22 +15,22 @@ const drugData = [
         "Start at the bottom end of the dose range, Adverse effects are more commonly seen at doses >2.5 μg/kg/min, >5μg/kg/min may cause seizures, Dilute in D5W, NSS,0.45 NaCl, LRS",
       reference: "some book",
     },
-    {
-      type: "CARDIO",
-      drug: "Norepinephrine",
-      dogMin: 0.2,
-      dogMax: 2,
-      catMin: 0.2,
-      catMax: 2,
-      doseUnit: "μg/kg/min",
-      concUnit: "mg/ml",
-      basicConc: "",
-      noteDog:
-        "Dilute in D5W , Dextrose 5%. **ห้าม Dilute กับ NSS อย่างเดียว (Oxidation)**",
-      noteCat:
-        "Dilute in D5W , Dextrose 5%. **ห้าม Dilute กับ NSS อย่างเดียว (Oxidation)**",
-      reference: "some book",
-    },
+    // {
+    //   type: "CARDIO",
+    //   drug: "Norepinephrine",
+    //   dogMin: 0.2,
+    //   dogMax: 2,
+    //   catMin: 0.2,
+    //   catMax: 2,
+    //   doseUnit: "μg/kg/min",
+    //   concUnit: "mg/ml",
+    //   basicConc: "",
+    //   noteDog:
+    //     "Dilute in D5W , Dextrose 5%. **ห้าม Dilute กับ NSS อย่างเดียว (Oxidation)**",
+    //   noteCat:
+    //     "Dilute in D5W , Dextrose 5%. **ห้าม Dilute กับ NSS อย่างเดียว (Oxidation)**",
+    //   reference: "some book",
+    // },
     {
       type: "CARDIO",
       drug: "Epinephrine (Adrenaline)",
@@ -133,7 +133,7 @@ const drugData = [
       dogMax: 100,
       catMin: 0,
       catMax: 0,
-      doseUnit: "μg/kg/min",
+      doseUnit: "ug/kg/min",
       concUnit: "mg/ml",
       basicConc: 20,
       noteDog:
