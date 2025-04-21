@@ -32,7 +32,7 @@ const drugData = [
     //   reference: "some book",
     // },
     {
-      type: "CARDIO",
+      type: "CARDIO", 
       drug: "Epinephrine (Adrenaline)",
       dogMin: 0.1,
       dogMax: 1,
