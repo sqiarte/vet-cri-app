@@ -70,19 +70,27 @@ const Cri = () => {
   const calculate = async (e) => {
     e.preventDefault();
     const formValidity = await validateForm();
-    let calcConc = convertUnit();
+    let calcConc = convertUnit(); // convert to ug/ml
     setCalUnit(calcConc);
     console.log("cal cal", calcConc);
     if (weight && dose && concentration && infusionTime) {
+      const normalizedDose = normalizeDose(dose, doseUnit);
       console.log("w", weight);
-      console.log("d", dose);
+      console.log("d", normalizedDose);
       console.log("c", concentration);
       console.log("time", infusionTime);
-      setVolume((weight * dose * 60 * infusionTime) / calcConc);
+      setVolume((weight * normalizedDose * 60 * infusionTime) / calcConc);
     } else {
       setVolume(0);
     }
   };
+
+  const normalizeDose = (dose, unit) => {
+    if (unit === "ug/kg/min" || unit === "μg/kg/min") return dose;
+    if (unit === "ug/kg/h" || unit === "μg/kg/h") return dose / 60;
+    if (unit === "mg/kg/h") return (dose * 1000) / 60;
+    return 0;
+  };  
 
   const setDefault = () => {
     if (selectedType) {
