@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cri-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cri-app
+  template:
+    metadata:
+      labels:
+        app: cri-app
+    spec:
+      containers:
+        - name: cri-app
+          image: cri-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
